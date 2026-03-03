@@ -38,7 +38,7 @@ export const sendDailyNews= inngest.createFunction(
       const result = await resend.broadcasts.create({
         from: "Niko Brief <nikoBrief@contact.nikow.work>",
         segmentId: "f80a9b33-78a7-4b42-91cf-849d3fb90f47", // replace with your actual segment ID
-        subject: "Your Daily News Summary from Niko Brief" + new Date().toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'}),
+        subject: "Your Daily News Summary from Niko Brief " + new Date().toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'}),
         html: newsSummary.html,
       });
       return result;

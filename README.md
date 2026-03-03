@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Daily Briefs by Niko
+
+A smarter way to stay informed — get concise updates on startups, technology, and the AI trends shaping the future.
+
+## Preview
+
+### Homepage
+![Homepage Screenshot](./public/homepage-screenshot.png)
+
+### Newsletter Email
+![Newsletter Screenshot](./public/newsletter-screenshot.png)
+
+---
+
+## Tech Stack
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Inngest](https://img.shields.io/badge/Inngest-000000?style=for-the-badge&logoColor=white)
+![Resend](https://img.shields.io/badge/Resend-000000?style=for-the-badge&logoColor=white)
+![RSS](https://img.shields.io/badge/RSS-FFA500?style=for-the-badge&logo=rss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+
+---
+
+## How It Works
+
+1. **RSS feeds** are used to fetch news from multiple sources.
+2. The news items are processed and formatted into a daily newsletter content
+3. **Inngest** runs a scheduled workflow every day.
+4. The workflow sends the formatted newsletter using **Resend**.
+5. Users receive a concise daily brief directly in their inbox.
+
+---
+
+## Built With
+
+- **Next.js** for the overall application framework
+- **React** for building the UI
+- **Tailwind CSS** for styling
+- **Inngest** for scheduled background workflows
+- **Resend** for email delivery and subscriber management
+- **RSS Parser** for collecting news from external sources
+- **Vercel** for deployment
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Make sure you are using **Node.js 20.9+**.
+
+Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/NikoZW/niko-brief.git
+cd niko-brief
 ```
+Install dependencies:
+```
+npm install
+```
+Create a .env.local file in the root directory and add your environment variables:
+```
+RESEND_API_KEY=your_resend_api_key
+```
+Start the development server:
+```
+npm run dev
+```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
